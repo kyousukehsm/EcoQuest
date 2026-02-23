@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://dex8o2nbie876"]
+
+[ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_6khvt"]
+[ext_resource type="Texture2D" uid="uid://ceia2vvuqd3fn" path="res://UI/box ui.png" id="2_rji6s"]
+[ext_resource type="FontFile" uid="uid://dlbb7887vy5jd" path="res://Assets/Fonts/PixelOperator8.ttf" id="2_yndki"]
+[ext_resource type="Texture2D" uid="uid://ddbfm2cy4ce1s" path="res://UI/BUTTON UI.png" id="4_v4pss"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_6khvt")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.5
+offset_top = -324.0
+offset_right = 408.5
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rji6s")
+
+[node name="ResumeButton" type="Button" parent="Control"]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -227.0
+offset_top = -207.0
+offset_right = 103.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.4, 1)
+theme_override_fonts/font = ExtResource("2_yndki")
+theme_override_font_sizes/font_size = 35
+action_mode = 0
+text = "RESUME"
+icon = ExtResource("4_v4pss")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="RestartButton" type="Button" parent="Control"]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -51.0
+offset_right = 104.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1)
+theme_override_fonts/font = ExtResource("2_yndki")
+theme_override_font_sizes/font_size = 35
+action_mode = 0
+text = "RESTART"
+icon = ExtResource("4_v4pss")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="QuitButton" type="Button" parent="Control"]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 102.0
+offset_right = 106.0
+offset_bottom = 212.0
+grow_horizontal = 2
+scale = Vector2(1.4, 1)
+theme_override_fonts/font = ExtResource("2_yndki")
+theme_override_font_sizes/font_size = 35
+text = "QUIT"
+icon = ExtResource("4_v4pss")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="button_down" from="Control/ResumeButton" to="." method="_on_resume_button_button_down"]
+[connection signal="pressed" from="Control/ResumeButton" to="." method="_on_resume_button_pressed"]

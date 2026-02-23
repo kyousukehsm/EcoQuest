@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://5t0cwjp5c36f"]
+
+[ext_resource type="Script" path="res://Scripts/CleanWater.gd" id="1_gi7vp"]
+[ext_resource type="Texture2D" uid="uid://i765ooft80w1" path="res://Assets/Tiles/cleanwater512x256.png" id="2_ar4xm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcwm5"]
+size = Vector2(409, 128)
+
+[node name="CleanWater" type="Area2D" groups=["CleanWater"]]
+modulate = Color(1, 1, 1, 0.705882)
+z_index = 5
+collision_mask = 2
+script = ExtResource("1_gi7vp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.5)
+texture = ExtResource("2_ar4xm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_hcwm5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

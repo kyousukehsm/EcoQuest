@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2blwt2q2urcn"]
+
+[ext_resource type="Script" path="res://Tools/vine_extender.gd" id="1_e464t"]
+[ext_resource type="Texture2D" uid="uid://bfliyhy05hiem" path="res://Assets/Tool/vinewand128.png" id="2_72vov"]
+[ext_resource type="Texture2D" uid="uid://bum7158hxo2kf" path="res://Assets/Tool/vine_extender.png" id="2_svby1"]
+[ext_resource type="AudioStream" uid="uid://dmtlldr1omm4x" path="res://Assets/Sounds/VineExtend.wav" id="3_xrg74"]
+
+[node name="VineExtender" type="Node2D"]
+z_index = 6
+z_as_relative = false
+script = ExtResource("1_e464t")
+icon_image = ExtResource("2_72vov")
+tool_sfx = ExtResource("3_xrg74")
+
+[node name="tool_sprite" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -1.19209e-07)
+scale = Vector2(0.153846, 0.153846)
+texture = ExtResource("2_svby1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

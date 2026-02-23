@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3pp0kdgnmioj"]
+
+[ext_resource type="Script" path="res://Scenes/EndLevelCan.gd" id="1_jjlsq"]
+[ext_resource type="Texture2D" uid="uid://ial8i1qob8k6" path="res://Assets/Sprites/trashcan.png" id="1_naxni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kopj8"]
+atlas = ExtResource("1_naxni")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp71b"]
+atlas = ExtResource("1_naxni")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2dqp"]
+atlas = ExtResource("1_naxni")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rh43"]
+atlas = ExtResource("1_naxni")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hkn1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kopj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp71b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2dqp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rh43")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ianq"]
+size = Vector2(29.25, 31)
+
+[node name="EndLevelCan" type="Area2D"]
+collision_mask = 512
+script = ExtResource("1_jjlsq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.328125, 0.328125)
+sprite_frames = SubResource("SpriteFrames_hkn1h")
+autoplay = "default"
+frame_progress = 0.216012
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.375, 6)
+shape = SubResource("RectangleShape2D_5ianq")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

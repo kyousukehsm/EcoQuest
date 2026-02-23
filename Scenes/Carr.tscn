@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4as5c3ch0w40"]
+
+[ext_resource type="Texture2D" uid="uid://3j8ey2mcyxxd" path="res://Assets/Sprites/carrr.png" id="1_auylc"]
+[ext_resource type="Script" path="res://Scripts/carr.gd" id="1_y5kns"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doh0y"]
+atlas = ExtResource("1_auylc")
+region = Rect2(0, 0, 66, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpyml"]
+atlas = ExtResource("1_auylc")
+region = Rect2(0, 21, 66, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv621"]
+atlas = ExtResource("1_auylc")
+region = Rect2(0, 42, 66, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8267"]
+atlas = ExtResource("1_auylc")
+region = Rect2(0, 63, 66, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jfwyx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doh0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpyml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv621")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8267")
+}],
+"loop": true,
+"name": &"Drive",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y58tq"]
+radius = 6.66667
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cku81"]
+size = Vector2(37.6667, 18.8333)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+scale = Vector2(3, 3)
+collision_mask = 513
+script = ExtResource("1_y5kns")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jfwyx")
+animation = &"Drive"
+frame_progress = 0.540098
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-25.6667, 2)
+shape = SubResource("CircleShape2D_y58tq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(11.5, 0.0833332)
+shape = SubResource("RectangleShape2D_cku81")

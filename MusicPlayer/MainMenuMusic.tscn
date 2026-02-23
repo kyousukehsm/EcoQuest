@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d8fbs1tu3k5c"]
+
+[ext_resource type="AudioStream" uid="uid://bfde1f2nlhmfk" path="res://Assets/Music/3-02 Kokiri Forest (Hyrule Symphony).mp3" id="1_2il4r"]
+
+[node name="MainMenuMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_2il4r")
+volume_db = -0.05
+autoplay = true

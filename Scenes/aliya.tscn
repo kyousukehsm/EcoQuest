@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwv4ye7tu1o1w"]
+
+[ext_resource type="Script" path="res://Scripts/aliya.gd" id="1_nocrw"]
+[ext_resource type="Texture2D" uid="uid://dkhe8pwjgh8rm" path="res://Assets/Sprites/aliya.png" id="1_yuamm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4wt8d"]
+radius = 19.0263
+
+[sub_resource type="Animation" id="Animation_ov3ms"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_phwo4"]
+resource_name = "vanish"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ha02s"]
+_data = {
+"RESET": SubResource("Animation_ov3ms"),
+"vanish": SubResource("Animation_phwo4")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_qsius"]
+line_spacing = 1.0
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_12svk"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Aliya" type="Node2D" groups=["Player"]]
+z_index = 7
+z_as_relative = false
+script = ExtResource("1_nocrw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 1)
+scale = Vector2(0.25, 0.27)
+texture = ExtResource("1_yuamm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6, 27)
+shape = SubResource("CircleShape2D_4wt8d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ha02s")
+}
+
+[node name="Notification" type="Label" parent="."]
+offset_left = -32.0
+offset_top = -66.0
+offset_right = 18.0
+offset_bottom = -48.0
+text = "Interact"
+label_settings = SubResource("LabelSettings_qsius")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -185.0
+offset_top = 159.0
+offset_right = 9.0
+offset_bottom = 215.0
+label_settings = SubResource("LabelSettings_12svk")
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

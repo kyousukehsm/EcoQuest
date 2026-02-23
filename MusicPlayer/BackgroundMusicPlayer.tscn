@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbq15bkrth2hg"]
+
+[ext_resource type="AudioStream" uid="uid://gws6fitcpq74" path="res://Assets/Music/3-13 The Legend of Zelda Suite (Hyrule Symphony).mp3" id="1_5q8p2"]
+
+[node name="BackgroundMusicPlayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_5q8p2")

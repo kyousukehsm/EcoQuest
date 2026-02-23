@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://c200hhokfv1hx"]
+
+[ext_resource type="Script" path="res://Scripts/car.gd" id="1_uxoyc"]
+[ext_resource type="Texture2D" uid="uid://3j8ey2mcyxxd" path="res://Assets/Sprites/carrr.png" id="2_svf6l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3dma"]
+atlas = ExtResource("2_svf6l")
+region = Rect2(0, 0, 66, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb5ls"]
+atlas = ExtResource("2_svf6l")
+region = Rect2(0, 21, 66, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25k0t"]
+atlas = ExtResource("2_svf6l")
+region = Rect2(0, 42, 66, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lepyr"]
+atlas = ExtResource("2_svf6l")
+region = Rect2(0, 63, 66, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nbm4c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3dma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb5ls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25k0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lepyr")
+}],
+"loop": true,
+"name": &"Drive",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sen4u"]
+radius = 16.0312
+
+[node name="Car" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_uxoyc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_nbm4c")
+animation = &"Drive"
+frame_progress = 0.358762
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-81, 6)
+shape = SubResource("CircleShape2D_sen4u")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlrcm8pfysc4i"]
+
+[ext_resource type="Texture2D" uid="uid://brgx7hqdj6k0b" path="res://Assets/Tiles/Climbables.png" id="1_3fi73"]
+[ext_resource type="Script" path="res://Scripts/climbable.gd" id="1_ih105"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffuqq"]
+size = Vector2(54, 186)
+
+[node name="ladder" type="Area2D" groups=["Player"]]
+script = ExtResource("1_ih105")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ffuqq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3fi73")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 192)
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
+[connection signal="player_nearby" from="." to="." method="_on_player_nearby"]

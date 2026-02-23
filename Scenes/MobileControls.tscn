@@ -1,0 +1,129 @@
+[gd_scene load_steps=11 format=3 uid="uid://fxk7qsbhlcw4"]
+
+[ext_resource type="Script" path="res://Scripts/MobileControls.gd" id="1_agc4f"]
+[ext_resource type="Texture2D" uid="uid://656wifcaerid" path="res://UI/shaded-dark/shadedDark24.png" id="3_olxg7"]
+[ext_resource type="Texture2D" uid="uid://d2hrktgnt6mgi" path="res://UI/shaded-dark/shadedDark25.png" id="4_d6g3t"]
+[ext_resource type="Texture2D" uid="uid://c3ttfbxory0i8" path="res://UI/shaded-dark/shadedDark27.png" id="5_pux14"]
+[ext_resource type="Texture2D" uid="uid://dmbkp7bv1ktq0" path="res://UI/shaded-dark/shadedDark48.png" id="6_1v84j"]
+[ext_resource type="Texture2D" uid="uid://dwfs2yh6h2tql" path="res://UI/shaded-dark/shadedDark45.png" id="7_r7bq2"]
+[ext_resource type="Texture2D" uid="uid://dhry1jtpaowgn" path="res://UI/shaded-dark/shadedDark26.png" id="7_xegtv"]
+[ext_resource type="Texture2D" uid="uid://cn8doyxslcp7c" path="res://UI/switchbutton.png" id="8_bpf6k"]
+[ext_resource type="Texture2D" uid="uid://c3dn8dq5oe1cy" path="res://UI/shaded-dark/shadedDark49.png" id="9_0xsnf"]
+[ext_resource type="Texture2D" uid="uid://4eemrg2k2l6k" path="res://UI/shaded-dark/shadedDark22.png" id="10_362xd"]
+
+[node name="MobileControls" type="CanvasLayer"]
+script = ExtResource("1_agc4f")
+
+[node name="DPAD" type="MarginContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = -430.0
+offset_right = 354.0
+offset_bottom = -206.0
+grow_vertical = 0
+scale = Vector2(1.2, 1.2)
+
+[node name="GridContainer" type="GridContainer" parent="DPAD"]
+layout_mode = 2
+columns = 3
+
+[node name="Button Up" type="TouchScreenButton" parent="DPAD/GridContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(49.1667, -85.8334)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("7_xegtv")
+passby_press = true
+
+[node name="Button Left" type="TouchScreenButton" parent="DPAD/GridContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(-80, 50)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("3_olxg7")
+passby_press = true
+
+[node name="Button Right" type="TouchScreenButton" parent="DPAD/GridContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(190.833, 55.8333)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("4_d6g3t")
+passby_press = true
+
+[node name="Button Down" type="TouchScreenButton" parent="DPAD/GridContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(49.1667, 184.167)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("5_pux14")
+passby_press = true
+
+[node name="debug" type="TouchScreenButton" parent="DPAD/GridContainer"]
+position = Vector2(-81.6667, -270)
+scale = Vector2(1.38856, 1.29089)
+texture_normal = ExtResource("10_362xd")
+passby_press = true
+
+[node name="Action" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.806242
+anchor_top = 0.899585
+anchor_right = 0.902075
+anchor_bottom = 0.966252
+offset_left = 46.0154
+offset_top = -127.763
+offset_right = 46.0154
+offset_bottom = -127.763
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.2, 1.2)
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Action"]
+layout_mode = 2
+
+[node name="Button Interact" type="TouchScreenButton" parent="Action/HBoxContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(-148.333, -11.4907)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("6_1v84j")
+passby_press = true
+
+[node name="Button Jump" type="TouchScreenButton" parent="Action/HBoxContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(54.1667, -45.6574)
+scale = Vector2(2.3, 2.3)
+texture_normal = ExtResource("7_r7bq2")
+passby_press = true
+
+[node name="Button Switch" type="TouchScreenButton" parent="Action/HBoxContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(113.333, -250.657)
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("8_bpf6k")
+passby_press = true
+
+[node name="Button Action" type="TouchScreenButton" parent="Action/HBoxContainer"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(-64.1667, -193.991)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("9_0xsnf")
+passby_press = true
+
+[connection signal="pressed" from="DPAD/GridContainer/Button Up" to="." method="_on_button_up_pressed"]
+[connection signal="released" from="DPAD/GridContainer/Button Up" to="." method="_on_button_up_released"]
+[connection signal="pressed" from="DPAD/GridContainer/Button Left" to="." method="_on_button_left_pressed"]
+[connection signal="released" from="DPAD/GridContainer/Button Left" to="." method="_on_button_left_released"]
+[connection signal="pressed" from="DPAD/GridContainer/Button Right" to="." method="_on_button_right_pressed"]
+[connection signal="released" from="DPAD/GridContainer/Button Right" to="." method="_on_button_right_released"]
+[connection signal="pressed" from="DPAD/GridContainer/Button Down" to="." method="_on_button_down_pressed"]
+[connection signal="released" from="DPAD/GridContainer/Button Down" to="." method="_on_button_down_released"]
+[connection signal="pressed" from="DPAD/GridContainer/debug" to="." method="_on_debug_pressed"]
+[connection signal="released" from="DPAD/GridContainer/debug" to="." method="_on_debug_released"]
+[connection signal="pressed" from="Action/HBoxContainer/Button Interact" to="." method="_on_button_interact_pressed"]
+[connection signal="released" from="Action/HBoxContainer/Button Interact" to="." method="_on_button_interact_released"]
+[connection signal="pressed" from="Action/HBoxContainer/Button Jump" to="." method="_on_button_jump_pressed"]
+[connection signal="released" from="Action/HBoxContainer/Button Jump" to="." method="_on_button_jump_released"]
+[connection signal="pressed" from="Action/HBoxContainer/Button Switch" to="." method="_on_button_switch_pressed"]
+[connection signal="released" from="Action/HBoxContainer/Button Switch" to="." method="_on_button_switch_released"]
+[connection signal="pressed" from="Action/HBoxContainer/Button Action" to="." method="_on_button_action_pressed"]
+[connection signal="released" from="Action/HBoxContainer/Button Action" to="." method="_on_button_action_released"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ds6ruuk365chp"
+path="res://.godot/imported/get heal.wav-a4bba6177f171095f7f7ba7bad8e5feb.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/get heal.wav"
+dest_files=["res://.godot/imported/get heal.wav-a4bba6177f171095f7f7ba7bad8e5feb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfde1f2nlhmfk"
+path="res://.godot/imported/3-02 Kokiri Forest (Hyrule Symphony).mp3-7ced055aded496006f80e4a622388dc3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/3-02 Kokiri Forest (Hyrule Symphony).mp3"
+dest_files=["res://.godot/imported/3-02 Kokiri Forest (Hyrule Symphony).mp3-7ced055aded496006f80e4a622388dc3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbim3pxpncgbf"]
+
+[ext_resource type="Script" path="res://Tools/CleaningBrush.gd" id="1_whdfe"]
+[ext_resource type="Texture2D" uid="uid://cppa13rnq4fol" path="res://Assets/Tool/brush128.png" id="2_llk1y"]
+[ext_resource type="Texture2D" uid="uid://b38g5ayguejnl" path="res://Assets/Tool/magic_brush.png" id="2_olsto"]
+[ext_resource type="AudioStream" uid="uid://phl1ik4wnvgn" path="res://Assets/Sounds/tap.wav" id="3_jknc0"]
+
+[node name="CleaningBrush" type="Node2D"]
+z_index = 6
+z_as_relative = false
+script = ExtResource("1_whdfe")
+icon_image = ExtResource("2_llk1y")
+tool_sfx = ExtResource("3_jknc0")
+
+[node name="tool_sprite" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, -2.38419e-07)
+scale = Vector2(0.308823, 0.308823)
+texture = ExtResource("2_olsto")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

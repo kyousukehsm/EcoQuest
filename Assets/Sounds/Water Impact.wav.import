@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://03f3a3767vby"
+path="res://.godot/imported/Water Impact.wav-ceb98dadafd5158ec2db87e0529d4d75.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Water Impact.wav"
+dest_files=["res://.godot/imported/Water Impact.wav-ceb98dadafd5158ec2db87e0529d4d75.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://ccib6hl5174l6"]
+
+[ext_resource type="Texture2D" uid="uid://bmupfl8k11qqu" path="res://Assets/Tiles/Mushroom.png" id="1_eb1p5"]
+[ext_resource type="Script" path="res://Scripts/BounceMushroom.gd" id="1_nccin"]
+[ext_resource type="AudioStream" uid="uid://g86vdjni3ku8" path="res://Assets/Sounds/mushroom-bounce-101soundboards.mp3" id="2_ljtrl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw8tn"]
+atlas = ExtResource("1_eb1p5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blyvs"]
+atlas = ExtResource("1_eb1p5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldhm4"]
+atlas = ExtResource("1_eb1p5")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfw1y"]
+atlas = ExtResource("1_eb1p5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b7jwi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw8tn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blyvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldhm4")
+}],
+"loop": false,
+"name": &"Bounce",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfw1y")
+}],
+"loop": false,
+"name": &"Idle",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0p3p"]
+radius = 29.0
+
+[node name="BounceMushroom" type="Node2D"]
+script = ExtResource("1_nccin")
+bounce_sfx = ExtResource("2_ljtrl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_b7jwi")
+animation = &"Bounce"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_d0p3p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

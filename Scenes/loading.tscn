@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmntbhhdvcspg"]
+
+[ext_resource type="Script" path="res://Scripts/loading.gd" id="1_s25k3"]
+[ext_resource type="FontFile" uid="uid://bp36x2d1i4gp6" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="2_xrj3g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5w242"]
+bg_color = Color(0.125771, 0.276534, 0.129034, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0470588, 0, 0, 1)
+
+[node name="Loading" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s25k3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -957.0
+offset_top = -540.5
+offset_right = 957.0
+offset_bottom = 540.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.793052, 0.280172, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = -342.0
+offset_top = 159.0
+offset_right = 371.0
+offset_bottom = 260.0
+theme_override_fonts/font = ExtResource("2_xrj3g")
+theme_override_font_sizes/font_size = 50
+text = "Loading Level..."
+
+[node name="FactContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -519.0
+offset_top = -318.0
+offset_right = 538.0
+offset_bottom = 126.0
+
+[node name="FactLabel" type="Label" parent="FactContainer"]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = -367.0
+offset_top = 235.0
+offset_right = 363.0
+offset_bottom = 293.0
+theme_override_font_sizes/font_size = 25
+theme_override_styles/background = SubResource("StyleBoxFlat_5w242")
+
+[node name="FactTimer" type="Timer" parent="."]
+
+[node name="LoadingTimer" type="Timer" parent="."]

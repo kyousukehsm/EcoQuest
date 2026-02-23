@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://m87q4v21qxej"
+path="res://.godot/imported/3-08 Zora_s Domain (Hyrule Symphony).mp3-2edb8f834455d6a57ed83c263e614227.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/3-08 Zora_s Domain (Hyrule Symphony).mp3"
+dest_files=["res://.godot/imported/3-08 Zora_s Domain (Hyrule Symphony).mp3-2edb8f834455d6a57ed83c263e614227.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

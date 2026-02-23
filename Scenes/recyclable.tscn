@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://hcbc35xa3cy7"]
+
+[ext_resource type="Script" path="res://Scripts/recyclable.gd" id="1_vao7p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2p6i"]
+radius = 23.0217
+
+[node name="Recyclable" type="Area2D" groups=["Player", "Recyclables"]]
+z_index = 6
+z_as_relative = false
+collision_mask = 2
+script = ExtResource("1_vao7p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c2p6i")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="collected" from="." to="." method="_on_collected"]

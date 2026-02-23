@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://ybbe381dvlux"]
+
+[ext_resource type="Script" path="res://Scripts/dialogue_box.gd" id="1_odjxx"]
+[ext_resource type="Texture2D" uid="uid://dmbkp7bv1ktq0" path="res://UI/shaded-dark/shadedDark48.png" id="2_4r27m"]
+
+[node name="DialogueBox" type="CanvasLayer"]
+script = ExtResource("1_odjxx")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -410.0
+offset_top = -194.0
+offset_right = 426.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Control" type="Control" parent="Panel"]
+anchors_preset = 0
+offset_left = 748.0
+offset_top = 86.0
+offset_right = 788.0
+offset_bottom = 126.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Control"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 19.0
+offset_right = 73.0
+offset_bottom = 50.0
+texture = ExtResource("2_4r27m")
+expand_mode = 1

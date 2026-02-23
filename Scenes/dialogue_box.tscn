@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ybbe381dvlux"]
+
+[ext_resource type="Script" uid="uid://knykkkqchsgb" path="res://Scripts/dialogue_box.gd" id="1_odjxx"]
+[ext_resource type="Texture2D" uid="uid://dmbkp7bv1ktq0" path="res://UI/shaded-dark/shadedDark48.png" id="2_4r27m"]
+
+[node name="DialogueBox" type="CanvasLayer" unique_id=761135150]
+script = ExtResource("1_odjxx")
+
+[node name="Panel" type="Panel" parent="." unique_id=1676862748]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -410.0
+offset_top = -194.0
+offset_right = 426.0
+offset_bottom = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel" unique_id=319040482]
+layout_mode = 0
+offset_right = 836.0
+offset_bottom = 146.0
+autowrap_mode = 3
+
+[node name="NextIndicator" type="Control" parent="Panel" unique_id=1104690376]
+anchors_preset = 0
+offset_left = 748.0
+offset_top = 86.0
+offset_right = 788.0
+offset_bottom = 126.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel/NextIndicator" unique_id=1095076303]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 19.0
+offset_right = 73.0
+offset_bottom = 50.0
+texture = ExtResource("2_4r27m")
+expand_mode = 1

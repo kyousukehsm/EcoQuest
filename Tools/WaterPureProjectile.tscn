@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw5c853v0qmtw"]
+
+[ext_resource type="Script" path="res://Tools/WaterPureProjectile.gd" id="1_qd2ui"]
+[ext_resource type="Texture2D" uid="uid://ck6c3p5d6tp3t" path="res://Assets/Particles/WaterDroplet.png" id="1_vi31w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7i2lj"]
+radius = 2.0
+
+[node name="WaterPureProjectile" type="RigidBody2D" groups=["Projectile"]]
+z_index = 6
+mass = 3.127
+lock_rotation = true
+script = ExtResource("1_qd2ui")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(-6.82121e-13, 2.38419e-07)
+rotation = 6.28319
+scale = Vector2(0.474632, 0.474632)
+texture = ExtResource("1_vi31w")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(11, 6, 11, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_7i2lj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

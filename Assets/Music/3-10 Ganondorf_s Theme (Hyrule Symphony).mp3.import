@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvt1nc08gyhmd"
+path="res://.godot/imported/3-10 Ganondorf_s Theme (Hyrule Symphony).mp3-90e54a7382c7a6713876c56ef8316753.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/3-10 Ganondorf_s Theme (Hyrule Symphony).mp3"
+dest_files=["res://.godot/imported/3-10 Ganondorf_s Theme (Hyrule Symphony).mp3-90e54a7382c7a6713876c56ef8316753.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

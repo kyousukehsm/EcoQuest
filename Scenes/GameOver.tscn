@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://cumq56i5yrmo"]
+
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_ay5fb"]
+[ext_resource type="Texture2D" uid="uid://ceia2vvuqd3fn" path="res://UI/box ui.png" id="2_u8oa4"]
+[ext_resource type="FontFile" uid="uid://dlbb7887vy5jd" path="res://Assets/Fonts/PixelOperator8.ttf" id="3_gw0dn"]
+[ext_resource type="Texture2D" uid="uid://ddbfm2cy4ce1s" path="res://UI/BUTTON UI.png" id="4_vtl61"]
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_ay5fb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -408.5
+offset_top = -324.0
+offset_right = 408.5
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u8oa4")
+
+[node name="RestartButton" type="Button" parent="Control"]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -51.0
+offset_right = 104.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1)
+theme_override_fonts/font = ExtResource("3_gw0dn")
+theme_override_font_sizes/font_size = 35
+action_mode = 0
+text = "RESTART"
+icon = ExtResource("4_vtl61")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="QuitButton" type="Button" parent="Control"]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 102.0
+offset_right = 106.0
+offset_bottom = 212.0
+grow_horizontal = 2
+scale = Vector2(1.4, 1)
+theme_override_fonts/font = ExtResource("3_gw0dn")
+theme_override_font_sizes/font_size = 35
+text = "QUIT"
+icon = ExtResource("4_vtl61")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Control/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Control/QuitButton" to="." method="_on_quit_button_pressed"]

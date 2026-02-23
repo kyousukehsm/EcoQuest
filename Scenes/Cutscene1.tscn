@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://xx3ugp54pbgt"]
+
+[ext_resource type="Texture2D" uid="uid://dkhe8pwjgh8rm" path="res://Assets/Sprites/aliya.png" id="1_jx32l"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jx32l")

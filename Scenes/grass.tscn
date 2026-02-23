@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddmsnpax5m4nu"]
+
+[ext_resource type="Texture2D" uid="uid://d1bdsqe5x03k5" path="res://Assets/Sprites/longgrass.png" id="1_7g8qq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b483d"]
+atlas = ExtResource("1_7g8qq")
+region = Rect2(0, 0, 100, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8xwb"]
+atlas = ExtResource("1_7g8qq")
+region = Rect2(0, 55, 100, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5ong"]
+atlas = ExtResource("1_7g8qq")
+region = Rect2(0, 110, 100, 55)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7g0i"]
+atlas = ExtResource("1_7g8qq")
+region = Rect2(0, 165, 100, 55)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cpwa7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b483d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8xwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5ong")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7g0i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D"]
+z_index = 5
+z_as_relative = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cpwa7")
+autoplay = "default"
+frame_progress = 0.773654

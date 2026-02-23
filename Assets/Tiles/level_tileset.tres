@@ -1,0 +1,28 @@
+[gd_resource type="TileSet" format=3 uid="uid://c1nhdw87ybrfd"]
+
+[ext_resource type="Texture2D" uid="uid://brgx7hqdj6k0b" path="res://Assets/Tiles/Climbables.png" id="1_debf4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2c81r"]
+texture = ExtResource("1_debf4")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/custom_data_0 = true
+0:1/0 = 0
+0:1/0/custom_data_0 = true
+0:2/0 = 0
+0:2/0/custom_data_0 = true
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14, -32, 9, -32, 10, 32, -13, 32)
+0:3/0/custom_data_0 = true
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14, -32, 9, -32, 10, 32, -13, 32)
+0:4/0/custom_data_0 = true
+0:5/0 = 0
+0:5/0/custom_data_0 = true
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 4
+custom_data_layer_0/name = "is_climbable"
+custom_data_layer_0/type = 1
+sources/1 = SubResource("TileSetAtlasSource_2c81r")

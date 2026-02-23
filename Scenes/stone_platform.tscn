@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://doxetwofbos8b"]
+
+[ext_resource type="Texture2D" uid="uid://dtv5mt2lk1pm6" path="res://Assets/Tiles/Platforms.png" id="1_m5h23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4oba"]
+size = Vector2(128, 28)
+
+[node name="GrassPlatform" type="AnimatableBody2D"]
+z_index = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m5h23")
+region_enabled = true
+region_rect = Rect2(0, 40, 128, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t4oba")
+one_way_collision = true

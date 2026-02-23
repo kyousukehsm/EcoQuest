@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://3h503mlngn84"]
+
+[ext_resource type="Texture2D" uid="uid://d3q2e4xg2vbrs" path="res://Assets/Sprites/potion.png" id="1_8l062"]
+[ext_resource type="Script" path="res://Scripts/health_pickup.gd" id="1_452s7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2pn2"]
+atlas = ExtResource("1_8l062")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_108ov"]
+atlas = ExtResource("1_8l062")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dy26"]
+atlas = ExtResource("1_8l062")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8g8q"]
+atlas = ExtResource("1_8l062")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_535hx"]
+atlas = ExtResource("1_8l062")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nisha"]
+atlas = ExtResource("1_8l062")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trg45"]
+atlas = ExtResource("1_8l062")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tct3b"]
+atlas = ExtResource("1_8l062")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6typb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2pn2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_108ov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dy26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8g8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_535hx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nisha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trg45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tct3b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xe1d"]
+radius = 7.0
+
+[node name="HealthPickup" type="Area2D"]
+scale = Vector2(2, 2)
+collision_mask = 512
+script = ExtResource("1_452s7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6typb")
+frame_progress = 0.919678
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_5xe1d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

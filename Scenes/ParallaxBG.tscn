@@ -1,0 +1,310 @@
+[gd_scene load_steps=5 format=3 uid="uid://4qf4w0ldmtwm"]
+
+[ext_resource type="Texture2D" uid="uid://c2b30up5f36jy" path="res://Assets/Backgrounds/skycloud/Clouds/Clouds 1/1.png" id="1_k6jjd"]
+[ext_resource type="Texture2D" uid="uid://b6nmhc8b6s8ly" path="res://Assets/Backgrounds/skycloud/Clouds/Clouds 1/2.png" id="2_k0rbt"]
+[ext_resource type="Texture2D" uid="uid://cuxft07yjhdv0" path="res://Assets/Backgrounds/skycloud/Clouds/Clouds 1/3.png" id="3_y0d4f"]
+[ext_resource type="Texture2D" uid="uid://cu0rffgb7gbe2" path="res://Assets/Backgrounds/skycloud/Clouds/Clouds 1/4.png" id="4_yd2yv"]
+
+[node name="Parallax" type="Node2D"]
+z_index = 2
+scale = Vector2(2, 2)
+
+[node name="ParallaxBackground9" type="ParallaxBackground" parent="."]
+offset = Vector2(0, 500)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, 500)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground9"]
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground9/ParallaxLayer"]
+offset_left = 575.333
+offset_right = 1151.33
+offset_bottom = 324.0
+texture = ExtResource("1_k6jjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+offset = Vector2(0, 500)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, 500)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+offset = Vector2(0, -200)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, -200)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -36)
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_k0rbt")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(2, -28)
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_y0d4f")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(-2, 28)
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_yd2yv")
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+offset = Vector2(0, -1000)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, -1000)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground3/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+flip_v = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+offset = Vector2(0, -1000)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, -1000)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+position = Vector2(0, -265.333)
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground4/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+flip_v = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
+offset = Vector2(0, -1000)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, -1000)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground5"]
+position = Vector2(0, -541)
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground5/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+flip_v = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground6" type="ParallaxBackground" parent="."]
+offset = Vector2(1720, -200)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 1720, -200)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground6"]
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground6/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground6"]
+position = Vector2(0, -36)
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground6/ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_k0rbt")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground6"]
+position = Vector2(2, -28)
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground6/ParallaxLayer3"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_y0d4f")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground6"]
+position = Vector2(-2, 28)
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground6/ParallaxLayer4"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_yd2yv")
+
+[node name="ParallaxBackground7" type="ParallaxBackground" parent="."]
+offset = Vector2(3400, -200)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 3400, -200)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground7"]
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground7/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground7"]
+position = Vector2(0, -36)
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground7/ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_k0rbt")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground7"]
+position = Vector2(2, -28)
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground7/ParallaxLayer3"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_y0d4f")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground7"]
+position = Vector2(-2, 28)
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground7/ParallaxLayer4"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_yd2yv")
+
+[node name="ParallaxBackground8" type="ParallaxBackground" parent="."]
+offset = Vector2(-1720, -200)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, -1720, -200)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground8"]
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground8/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground8"]
+position = Vector2(0, -36)
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground8/ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_k0rbt")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground8"]
+position = Vector2(2, -28)
+motion_scale = Vector2(0.2, 0.2)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground8/ParallaxLayer3"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_y0d4f")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground8"]
+position = Vector2(-2, 28)
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground8/ParallaxLayer4"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_yd2yv")
+
+[node name="ParallaxBackground10" type="ParallaxBackground" parent="."]
+offset = Vector2(0, -1900)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, -1900)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground10"]
+position = Vector2(0, -541)
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground10/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+flip_v = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground11" type="ParallaxBackground" parent="."]
+offset = Vector2(0, -2800)
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, -2800)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground11"]
+position = Vector2(0, -541)
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground11/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+flip_v = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground12" type="ParallaxBackground" parent="."]
+offset = Vector2(-1000, 10000)
+scale = Vector2(10, 50)
+transform = Transform2D(10, 0, 0, 50, -1000, 10000)
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground12"]
+position = Vector2(0, -541)
+motion_scale = Vector2(0, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground12/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k6jjd")
+flip_v = true
+metadata/_edit_use_anchors_ = true

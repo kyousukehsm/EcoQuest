@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbavn7bqx732x"]
+
+[ext_resource type="Script" path="res://Tools/WaterPurifier.gd" id="1_lds6o"]
+[ext_resource type="Texture2D" uid="uid://ci1vo7thldqn5" path="res://Assets/Tool/water_purifier.png" id="2_xv26l"]
+[ext_resource type="AudioStream" uid="uid://du3o6qy8pni8j" path="res://Assets/Sounds/surfacewater.wav" id="3_58pq0"]
+[ext_resource type="Texture2D" uid="uid://cg0m843aujkmp" path="res://Assets/Tool/waterpurifier128.png" id="3_vmhtq"]
+
+[node name="WaterPurifier" type="Node2D"]
+z_index = 6
+z_as_relative = false
+position = Vector2(-16, 0)
+script = ExtResource("1_lds6o")
+icon_image = ExtResource("3_vmhtq")
+tool_sfx = ExtResource("3_58pq0")
+tool_name = "Wa"
+
+[node name="tool_sprite" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 1.98952e-13)
+rotation = 6.28319
+scale = Vector2(0.175514, 0.175514)
+texture = ExtResource("2_xv26l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
