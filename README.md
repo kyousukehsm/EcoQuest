@@ -1,7 +1,7 @@
 # EcoQuest: Jemboy’s Quest to Clean Agusan del Sur
 
 ## 📖 About the Project
-EcoQuest is a 2D educational action-platformer mobile game. It is designed specifically for children aged 7 to 12 to teach environmental awareness, proper waste management, and sustainability. Set in real-world locations inspired by San Francisco, Agusan del Sur, the game blends environmental education with engaging fantasy elements. 
+EcoQuest is a 2D educational action-platformer mobile game developed by me during my thesis in 2024. It is designed specifically for children aged 7 to 12 to teach environmental awareness, proper waste management, and sustainability. Set in real-world locations inspired by San Francisco, Agusan del Sur, the game blends environmental education with engaging fantasy elements. 
 
 Players control Jemboy, a young Manobo boy, who is guided by a mystical forest spirit named Diwata Aliya. Together, they go on a journey to clean up the local environment and defeat the pollution caused by the main antagonist, The Industrialist.
 
